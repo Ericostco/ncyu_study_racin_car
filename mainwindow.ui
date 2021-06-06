@@ -65,7 +65,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="start_game">
+   <widget class="QPushButton" name="button_start_game">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -73,6 +73,9 @@
       <width>250</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
     </property>
     <property name="text">
      <string/>
@@ -88,7 +91,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="distance">
+   <widget class="QLabel" name="label_distance">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -112,19 +115,24 @@
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="lcd_time">
+   <widget class="QLCDNumber" name="lcd_clock">
     <property name="geometry">
      <rect>
       <x>690</x>
       <y>40</y>
       <width>100</width>
-      <height>10</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(0, 0, 127)</string>
     </property>
    </widget>
   </widget>
