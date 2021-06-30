@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>躲避車遊戲</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/src/icon.ico</normaloff>:/src/icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="background">
@@ -135,6 +139,63 @@
      <string notr="true">color:rgb(0, 0, 127)</string>
     </property>
    </widget>
+   <widget class="QLabel" name="block_01">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>80</y>
+      <width>64</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="image.qrc">:/src/item1.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="block_02">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>190</y>
+      <width>64</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="image.qrc">:/src/item2.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="block_03">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>320</y>
+      <width>64</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="image.qrc">:/src/item3.png</pixmap>
+    </property>
+   </widget>
+   <zorder>background</zorder>
+   <zorder>block_01</zorder>
+   <zorder>block_02</zorder>
+   <zorder>block_03</zorder>
+   <zorder>label_title</zorder>
+   <zorder>car</zorder>
+   <zorder>button_start_game</zorder>
+   <zorder>label_distance</zorder>
+   <zorder>lcd_clock</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -145,8 +206,26 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>選單</string>
+    </property>
+    <addaction name="actionstart_game"/>
+    <addaction name="actionclose_game"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionstart_game">
+   <property name="text">
+    <string>開始遊戲</string>
+   </property>
+  </action>
+  <action name="actionclose_game">
+   <property name="text">
+    <string>關閉遊戲</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="image.qrc"/>
